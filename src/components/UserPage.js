@@ -99,7 +99,7 @@ class UserPage extends Component{
           
           componentDidMount(){ 
             console.log("request send");
-            axios.get("http://localhost:3000/dashboard",{
+            axios.get("https://global-news-backend.herokuapp.com//dashboard",{
               headers : {
                 "auth-token": localStorage.getItem("token")
               }
@@ -139,7 +139,7 @@ class UserPage extends Component{
 
             formData.append("profilePic",this.state.profilePic)
  
-            axios.post(`http://localhost:3000/upload/${this.state.id}`,formData)
+            axios.post(`https://global-news-backend.herokuapp.com//upload/${this.state.id}`,formData)
             
             .then( (res)=>{
             console.log(res)
@@ -173,7 +173,7 @@ class UserPage extends Component{
           
               console.log(registered)
           
-              axios.post(`http://localhost:3000/update/${this.state.id}`,registered)
+              axios.post(`https://global-news-backend.herokuapp.com//update/${this.state.id}`,registered)
               .then( (Response)=>{
 
                 console.log(Response)

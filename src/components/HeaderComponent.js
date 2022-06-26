@@ -18,7 +18,7 @@ class  Header extends Component {
 
     componentDidMount(){ 
         console.log("request send");
-        axios.get("http://localhost:3000/dashboard",{
+        axios.get("https://global-news-backend.herokuapp.com//dashboard",{
           headers : {
             "auth-token": localStorage.getItem("token")
           }

@@ -54,7 +54,7 @@ export default class TextEditor extends Component {
 
     formData.append("headerPic",this.state.headerPic)
 
-    axios.post(`http://localhost:3000/writenews/tempUpload`,formData)
+    axios.post(`https://global-news-backend.herokuapp.com//writenews/tempUpload`,formData)
     
     .then( (res)=>{
     //console.log(res)
@@ -108,7 +108,7 @@ export default class TextEditor extends Component {
 
   componentDidMount(){ 
     console.log("request send");
-    axios.get("http://localhost:3000/dashboard",{
+    axios.get("https://global-news-backend.herokuapp.com//dashboard",{
       headers : {
         "auth-token": localStorage.getItem("token")
       }
@@ -197,7 +197,7 @@ export default class TextEditor extends Component {
           category: this.state.authorDesk
         }
         console.log("NW",nw);
-        axios.put(`http://localhost:3000/writenews/edit/${this.state.id}`, nw)
+        axios.put(`https://global-news-backend.herokuapp.com//writenews/edit/${this.state.id}`, nw)
         .then((res) => {
             console.log("After PUT");
             console.log(res.data);
@@ -209,7 +209,7 @@ export default class TextEditor extends Component {
       else
       {
         console.log(formData);
-        axios.post("http://localhost:3000/writenews", formData)
+        axios.post("https://global-news-backend.herokuapp.com//writenews", formData)
         .then((res) => {
             console.log("After POST");
             console.log(res.data);

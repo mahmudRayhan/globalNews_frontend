@@ -124,7 +124,7 @@ function RenderNews({news}) {
           }
           
           else{
-            axios.get("http://localhost:3000/dashboard",{
+            axios.get("https://global-news-backend.herokuapp.com//dashboard",{
               headers : {
                 "auth-token": localStorage.getItem("token")
               }

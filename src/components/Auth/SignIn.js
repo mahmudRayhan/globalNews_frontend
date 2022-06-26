@@ -46,7 +46,7 @@ class SignIn extends Component{
 
 
   // async showMessage(){
-  //   await axios.get("http://localhost:3000/app/signin")
+  //   await axios.get("https://global-news-backend.herokuapp.com//app/signin")
   //   .then( (res)=>{
   //     console.log(res.data)
   //     this.setState({
@@ -70,7 +70,7 @@ class SignIn extends Component{
     console.log(loggedIn);
 
     
-    axios.post("http://localhost:3000/signin",loggedIn)
+    axios.post("https://global-news-backend.herokuapp.com//signin",loggedIn)
     .then( (res)=>{  
     console.log("In then");
     console.log(loggedIn);
