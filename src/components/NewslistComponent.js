@@ -54,7 +54,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css'
     }
 
     componentDidMount(){
-      axiosNew.get("https://global-news-backend.herokuapp.com//dashboard",{
+      axiosNew.get("https://global-news-backend.herokuapp.com/dashboard",{
           headers : {
             "auth-token": localStorage.getItem("token")
           }
@@ -131,7 +131,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css'
 
     onDelete = (id) => {
 
-      axiosNew.delete(`https://global-news-backend.herokuapp.com//news/${id}`)
+      axiosNew.delete(`https://global-news-backend.herokuapp.com/news/${id}`)
       .then( res => {
         window.location.reload()
         console.log(res.data);

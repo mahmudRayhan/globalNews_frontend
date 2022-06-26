@@ -122,7 +122,7 @@ class StaffRegister extends Component{
   
       console.log(registered)
   
-      axios.post("https://global-news-backend.herokuapp.com//staffRegister",registered)
+      axios.post("https://global-news-backend.herokuapp.com/staffRegister",registered)
       .then( (Response)=>{
         console.log(Response.data)
       console.log(registered) }

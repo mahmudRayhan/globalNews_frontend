@@ -368,7 +368,7 @@ class Home extends Component {
     }
     console.log(search);
 	 
-    axios.post("https://global-news-backend.herokuapp.com//search",search)
+    axios.post("https://global-news-backend.herokuapp.com/search",search)
     .then( (res)=>{  
     //console.log("In then");
 
